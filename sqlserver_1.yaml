@@ -24,7 +24,7 @@ spec:
   ports:
   - {name: tds, port: 1433}
   selector: {name: mssql1, type: sqlservr}
-  type: NodePort
+  type: LoadBalancer
 ---
 apiVersion: mssql.microsoft.com/v1
 kind: SqlServer
@@ -52,7 +52,7 @@ spec:
   ports:
   - {name: tds, port: 1433}
   selector: {name: mssql2, type: sqlservr}
-  type: NodePort
+  type: LoadBalancer
 ---
 apiVersion: mssql.microsoft.com/v1
 kind: SqlServer
@@ -80,4 +80,4 @@ spec:
   ports:
   - {name: tds, port: 1433}
   selector: {name: mssql3, type: sqlservr}
-  type: NodePort
+  type: LoadBalancer

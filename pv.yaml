@@ -5,7 +5,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: local-scsi
+  storageClassName: slow
   capacity:
     storage: 10Gi
   accessModes:
@@ -19,7 +19,7 @@ spec:
         - key: kubernetes.io/hostname
           operator: In
           values:
-          - kubenode1
+          - ip-10-38-3-94.wudip.com
 ---
 kind: PersistentVolume
 apiVersion: v1
@@ -28,7 +28,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: local-scsi
+  storageClassName: slow
   capacity:
     storage: 10Gi
   accessModes:
@@ -42,7 +42,7 @@ spec:
         - key: kubernetes.io/hostname
           operator: In
           values:
-          - kubenode2
+          - ip-10-38-3-83.wudip.com
 ---
 kind: PersistentVolume
 apiVersion: v1
@@ -51,7 +51,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: local-scsi
+  storageClassName: slow
   capacity:
     storage: 10Gi
   accessModes:
@@ -65,4 +65,4 @@ spec:
         - key: kubernetes.io/hostname
           operator: In
           values:
-            - kubenode3
+            - ip-10-38-3-105.wudip.com
